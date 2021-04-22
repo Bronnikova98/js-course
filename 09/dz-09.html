@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/mustard-ui.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title> dz 09</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Домашняя работа номер 9</h1>
+
+
+        <p><b>Задание 1.</b></p>
+        <p>Добавьте кнопку .b-1, которая запускает функцию f1. Функция присваивает блоку .out-1 ширину 200px, высоту
+            40px.</p>
+        <p><b>Решение:</b></p>
+        <pre>const out1 = document.querySelector('.out-1');<br>
+            function f1() {<br>
+                out1.style.width = '200px';<br>
+                out1.style.height = '40px';<br>            
+            }<br>
+            document.querySelector('.b-1').onclick = f1;</pre>
+
+        <button class="button-primary b-1">Task-1</button>
+        <div class="out-1 bg-red">out-1</div>
+
+        <p><b>Задание 2.</b></p>
+        <p>По нажатию кнопки b-2 запускайте функцию f2, которая присваивает блоку out-2 класс .bg-2.</p>
+        <p><b>Решение:</b></p>
+        <pre>let out2 = document.querySelector('.out-2');<br> 
+            function f2() {<br> 
+                out2.classList.add('bg-2');<br> 
+            }<br> 
+            document.querySelector('.b-2').onclick = f2;</pre>
+        <button class="button-primary b-2">Task-2</button>
+        <div class="out-2">out-2</div>
+
+        <p><b>Задание 3.</b></p>
+        <p>По нажатию кнопки b-3 запускайте функцию f3, которая удаляет у блока out-3 класс .bg-3.</p>
+        <p><b>Решение:</b></p>
+        <pre>let out3 = document.querySelector('.out-3');<br>
+            function f3() {<br>
+                out3.classList.remove('bg-3');<br>
+            }<br>
+            document.querySelector('.b-3').onclick = f3;</pre>
+        <button class="button-primary b-3">Task-3</button>
+        <div class="out-3 bg-3">out-3</div>
+
+        <p><b>Задание 4.</b></p>
+        <p>По нажатию кнопки b-4 запускайте функцию f4, которая делает toggle класса bg-4 для блока out-4.</p>
+        <p><b>Решение:</b></p>
+        <pre>let out4 = document.querySelector('.out-4');<br>
+            function f4() {<br>
+                out4.classList.toggle('bg-4');<br>
+            }<br>
+        document.querySelector('.b-4').onclick = f4;</pre>
+        <button class="button-primary b-4">Task-4</button>
+        <div class="out-4">out-4</div>
+
+        <p><b>Задание 5.</b></p>
+        <p>По нажатию b-5 запускайте функцию f5, которая проверяет наличие класса bg-4 у блока out-4 (да, именно
+            bg-4 у out-4 ). Результат - true или false, выводите в out-5.</p>
+        <p><b>Решение:</b></p>
+        <pre>let out5 = document.querySelector('.out-5');<br>
+            function f5() {<br>
+                if (out4.classList.contains('bg-4')) {<br>
+                    out5.innerHTML = true;<br>
+                }<br>
+                else {<br>
+                    out5.innerHTML = false;<br>
+                }<br>
+            }<br>
+            document.querySelector('.b-5').onclick = f5;</pre>
+        <button class="button-primary b-5">Task-5</button>
+        <div class="out-5"></div>
+
+        <p><b>Задание 6.</b></p>
+        <p>По нажатию b-6 запускайте функцию f6, которая выводит в out-6 количество параграфов с классом p-6.</p>
+
+        <p class="p-6">p-6</p>
+        <p class="p-6">p-6</p>
+        <p class="p-6">p-6</p>
+        <p class="p-6">p-6</p>
+        <p><b>Решение:</b></p>
+        <pre>let par = document.getElementsByClassName('p-6').length;<br>
+            function f6() {<br>
+                document.querySelector('.out-6').innerHTML = par;<br>
+            }<br>
+            document.querySelector('.b-6').onclick = f6;</pre>
+        <button class="button-primary b-6">Task-6</button>
+        <div class="out-6"></div>
+
+        <p><b>Задание 7.</b></p>
+        <p>По нажатию кнопки b-7 запускайте функцию f7, которая присваивает блокам out-7 класс .bg-7. Обратите
+            внимание, что данных блоков больше одного, следовательно нужен цикл.</p>
+        <p><b>Решение:</b></p>
+        <pre>let blocks7 = document.querySelectorAll('.out-7');<br>
+            let blocklen7 = document.getElementsByClassName('out-7').length;<br>
+            function f7() {<br>
+                for (let i = 0; i &#x3C blocklen7; i++) {<br>
+                    blocks7[i].classList.add('bg-7');<br>
+                }<br>
+            }<br>
+            document.querySelector('.b-7').onclick = f7;</pre>
+        <button class="button-primary b-7">Task-7</button>
+        <div class="out-7">out-7</div>
+        <div class="out-7">out-7</div>
+        <div class="out-7">out-7</div>
+
+        <p><b>Задание 8.</b></p>
+        <p>По нажатию кнопки b-8 запускайте функцию f8, которая делает toggle блокам out-8 класс .bg-8. Обратите
+            внимание, что данных блоков больше одного, следовательно нужен цикл.</p>
+        <p><b>Решение:</b></p>
+        <pre>let blocks8 = document.querySelectorAll('.out-8');<br>
+            let blocklen8 = document.getElementsByClassName('out-8').length;<br>
+            function f8() {<br>
+                for (let i = 0; i &#x3C blocklen8; i++) {<br>
+                    blocks8[i].classList.toggle('bg-7');<br>
+                }<br>
+            }<br>
+            document.querySelector('.b-8').onclick = f8;</pre>
+
+        <button class="button-primary b-8">Task-8</button>
+        <div class="out-8 bg-8">out-8</div>
+        <div class="out-8">out-8</div>
+        <div class="out-8 bg-8">out-8</div>
+        <div class="out-8">out-8</div>
+
+        <p><b>Задание 9.</b></p>
+        <p>Усложним предыдущие задачи. С помощью цикла повесьте на блоки out-9 событие клик. По клику должна
+            выполняться функция f9. Функция, должна добавлять класс bg-9 тому out-9 на котором кликнули.</p>
+        <p><b>Решение:</b></p>
+        <pre>function f9() {
+            this.classList.add('bg-9');<br>
+        }<br>
+        let div9 = document.querySelectorAll('.out-9');<br>
+        for (let i = 0; i &#x3C div9.length; i++) {<br>
+            div9[i].onclick = f9;<br>
+        }</pre>
+        <div class="out-9">out-9</div>
+        <div class="out-9">out-9</div>
+        <div class="out-9">out-9</div>
+
+
+        <p><b>Задание 10</b></p>
+        <p>Усложним предыдущие задачи. С помощью цикла повесьте на блоки out-10 событие клик. По клику должна
+            выполняться функция f10. Функция, должна делать toggle класса bg-10 тому out-10 на котором кликнули.</p>
+        <p><b>Решение:</b></p>
+        <pre>let div10 = document.querySelectorAll('.out-10');<br>
+            function f10() {<br>
+                this.classList.toggle('bg-10');<br>
+            }<br>
+            for (let i = 0; i &#x3C div10.length; i++) {<br>
+                div10[i].onclick = f10;<br>
+            }</pre>
+        <div class="out-10 bg-10">out-10</div>
+        <div class="out-10">out-10</div>
+        <div class="out-10 bg-10">out-10</div>
+        <div class="out-10">out-10</div>
+
+        <p><b>Задание 11</b></p>
+        <p>Добавьте кнопку .b-11, которая запускает функцию f11. Функция создает через createElement div c текстом
+            25 и добавляет его через append в out-11.</p>
+        <p><b>Решение:</b></p>
+        <pre>function f11() {<br>
+            let d = document.createElement('div');<br>
+            d.innerHTML = 25;<br>
+            document.querySelector('.out-11').append(d);<br>
+        }<br>
+        document.querySelector('.b-11').onclick = f11;</pre>
+
+        <button class="button-primary b-11">Task-11</button>
+        <div class="out-11"></div>
+
+        <p><b>Задание 12</b></p>
+        <p>Добавьте кнопку .b-12, которая запускает функцию f12. Функция создает через createElement div c текстом
+            12 и добавляет ему класс bg-12. Созданный div добавляется в out-12.</p>
+        <p><b>Решение:</b></p>
+        <pre>function f12() {<br>
+            let c = document.createElement('div');<br>
+            c.innerHTML = 12;<br>
+            c.classList.add('bg-12');<br>
+            document.querySelector('.out-12').append(c);<br>        
+        }<br>
+        document.querySelector('.b-12').onclick = f12;</pre>
+
+        <button class="button-primary b-12">Task-12</button>
+        <div class="out-12"></div>
+
+        <p><b>Задание 13</b></p>
+        <p>Добавьте кнопку .b-13, которая запускает функцию f13. Функция создает через createElement div c текстом
+            pushMe и добавляет ему класс bg-13. Также, созданному div добавляется событие onclick, по которому
+            выполняется функция f13_1. Созданный div добавляется в out-13.
+        </p>
+        <p><b>Решение:</b></p>
+        <pre>function f13() {<br>
+            let e = document.createElement('div');<br>
+            e.innerHTML = 'pushMe';<br>
+            e.classList.add('bg-13');<br>
+            e.onclick = f13_1;<br>
+            document.querySelector('.out-13').append(e);<br>
+        }<br>
+        function f13_1() {<br>
+            document.querySelector('.out-13-1').innerHTML += this.innerHTML;<br>
+        }<br>
+        document.querySelector('.b-13').onclick = f13;</pre>
+
+        <button class="button-primary b-13">Task-13</button>
+        <div class="out-13"></div>
+        <div class="out-13-1"></div>
+
+        <p><b>Задание 14</b></p>
+        <p>Добавьте кнопку .b-14, которая запускает функцию f14. Функция создает через createElement div c текстом
+            14 и добавляет ему класс bg-14. Созданный div добавляется в out-14 с помощью prepend.
+        </p>
+        <p><b>Решение:</b></p>
+        <pre>function f14() {<br>
+            let p = document.createElement('div');<br>
+            p.innerHTML = 14;<br>
+            p.classList.add('bg-14');<br>
+            document.querySelector('.out-14').prepend(p);<br>
+        }<br>
+        document.querySelector('.b-14').onclick = f14;</pre>
+
+        <button class="button-primary b-14">Task-14</button>
+        <div class="out-14 bg-13">
+            This is out-14
+        </div>
+
+        <p><b>Задание 15</b></p>
+        <p>Добавьте кнопку .b-15, которая запускает функцию f15. Функция создает через createElement div c текстом
+            15 и добавляет ему класс bg-15. Созданный div добавляется в out-15 с помощью before.
+        </p>
+        <p><b>Решение:</b></p>
+        <pre>function f15() {<br>
+            let g = document.createElement('div');<br>
+            g.innerHTML = 15;<br>
+            g.classList.add('bg-15');<br>
+            document.querySelector('.out-15').before(g);<br>
+        }<br>
+        document.querySelector('.b-15').onclick = f15;</pre>
+
+        <button class="button-primary b-15">Task-15</button>
+        <div class="out-15 bg-9">
+            This is out-15
+        </div>
+
+        <p><b>Задание 16</b></p>
+        <p>Добавьте кнопку .b-16, которая запускает функцию f16. Функция создает через createElement div c текстом
+            16 и добавляет ему класс bg-16. Созданный div добавляется в out-16 с помощью after.
+        </p>
+        <p><b>Решение:</b></p>
+        <pre>function f16() {<br>
+            let s = document.createElement('div');<br>
+            s.innerHTML = 16;<br>
+            s.classList.add('bg-16');<br>
+            document.querySelector('.out-16').after(s);<br>
+        }<br>
+        document.querySelector('.b-16').onclick = f16;</pre>
+
+        <button class="button-primary b-16">Task-16</button>
+        <div class="out-16 bg-4">
+            This is out-16
+        </div>
+
+        <p><b>Задание 17</b></p>
+        <p>Добавьте кнопку .b-17, которая запускает функцию f17. Функция создает через createElement div c текстом
+            17 и добавляет ему класс bg-17. Созданный div заменяет out-17 с помощью replaceWith.
+        </p>
+        <p><b>Решение:</b></p>
+        <pre>function f17() {<br>
+            let r = document.createElement('div');<br>
+            r.innerHTML = 17;<br>
+            r.classList.add('bg-17');<br>
+            document.querySelector('.out-17').replaceWith(r);<br>
+        }<br>
+        document.querySelector('.b-17').onclick = f17;</pre>
+
+        <button class="button-primary b-17">Task-17</button>
+        <div class="out-17 bg-13">
+            This is out-17
+        </div>
+
+        <p><b>Задание 18</b></p>
+        <p>Добавьте кнопку .b-18, которая запускает функцию f18. Функция с помощью getAttribute получает data-b
+            атрибут с параграф p-18 и выводит в out-18.</p>
+        <p><b>Решение:</b></p>
+        <pre>let att = document.querySelector('.p-18');<br>
+            function f18() {<br>
+                document.querySelector('.out-18').innerHTML = att.getAttribute('data-b');<br>
+            }<br>
+            document.querySelector('.b-18').onclick = f18;</pre>
+        <p class="p-18" data-b="hello">This is p-18</p>
+        <button class="button-primary b-18">Task-18</button>
+        <div class="out-18"></div>
+
+        <p><b>Задание 19</b></p>
+        <p>Добавьте кнопку .b-19, которая запускает функцию f19. Функция с помощью getAttribute получает data-b
+            атрибут с параграфов p-19 и выводит в out-19 через пробел. Обратите внимание, что элементов p-19 больше
+            одного.</p>
+        <p><b>Решение:</b></p>
+        <pre>let out19 = document.querySelector('.out-19');<br>
+            let atts = document.querySelectorAll('.p-19');<br>
+            function f19() {<br>
+                for (let i = 0; i &#x3C atts.length; i++) {<br>            
+                    out19.innerHTML += atts[i].getAttribute('data-b') + ' ';<br>
+                }<br>
+            }<br>
+            document.querySelector('.b-19').onclick = f19;</pre>
+
+        <p class="p-19" data-b="3">This is p-19</p>
+        <p class="p-19" data-b="14">This is p-19</p>
+        <p class="p-19" data-b="15">This is p-19</p>
+        <p class="p-19" data-b="92">This is p-19</p>
+
+        <button class="button-primary b-19">Task-19</button>
+        <div class="out-19"></div>
+
+        <p><b>Задание 20</b></p>
+        <p>Добавьте кнопку .b-20, которая запускает функцию f20. Функция с помощью setAttribute присваивает атрибут
+            title="go" в div.out-20.</p>
+        <p><b>Решение:</b></p>
+        <pre>let out20 = document.querySelector('.out-20');<br>
+            function f20() {<br>
+                out20.setAttribute("title", "go");<br>
+            }<br>
+            document.querySelector('.b-20').onclick = f20;</pre>
+        <button class="button-primary b-20">Task-20</button>
+        <div class="out-20"></div>
+
+    </div>
+
+    <script src="dz-09.js"></script>
+</body>
+
+</html>
